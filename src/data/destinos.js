@@ -8,7 +8,7 @@ export const destinos = [
   { id: 2, nombre: "San Andrés Siete Colores", region: "Insular", duracion: "5 días / 4 noches", incluye: "Hotel frente al mar, paseo en lancha y snorkel", precio: 2350000,
     imagen: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=85",
     descripcion: "El mar de siete colores, arena blanca y cayos de postal.",
-    detalle: "Cinco días para navegar por Johnny Cay y Acuario, hacer snorkel y recorrer la isla en maleta de golf. Tiquetes aéreos no incluidos." },
+    detalle: "Cinco días para navegar por Johnny Cay y Acuario, hacer snorkel y recorrer la isla en carrito de golf. Tiquetes aéreos no incluidos." },
   { id: 3, nombre: "Eje Cafetero Aventura", region: "Andina", duracion: "3 días / 2 noches", incluye: "Finca cafetera, Valle de Cocora y termales", precio: 980000,
     imagen: "/images/eje-cafetero.jpg",
     descripcion: "Palmas de cera, cafetales y pueblos patrimonio entre montañas.",
