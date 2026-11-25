@@ -3,6 +3,10 @@
 Proyecto final del curso: aplicación web de una agencia de viajes con paquetes turísticos por Colombia.
 No usa backend: los datos se guardan en el navegador (`localStorage` / `sessionStorage`).
 
+## Enlaces
+- **Sitio publicado:** https://rumbo-colombia.vercel.app
+- **Código fuente:** https://github.com/josecampoz/rumbo-colombia
+
 ## Ejecutar
 ```bash
 npm install
@@ -64,7 +68,7 @@ npm run build    # producción (carpeta dist)
 Las capturas están en `docs/capturas/`.
 
 ## Imágenes
-Los destinos usan ilustraciones SVG propias (`public/images/`). El administrador puede registrar destinos con fotos reales desde `/admin/nuevo`.
+Cinco de los seis destinos usan fotografías de [Unsplash](https://unsplash.com) cargadas por URL (necesitan conexión a internet). Eje Cafetero (`eje-cafetero.jpg`) y la portada (`hero-rumbo-colombia.png`) usan imágenes locales de `public/images/`. El administrador puede registrar destinos con fotos reales desde `/admin/nuevo`.
 
 ## Despliegue en Vercel
 1. Subir el proyecto a GitHub (`git init && git add . && git commit -m "Versión final" && git push`).
