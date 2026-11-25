@@ -7,7 +7,9 @@ import { formatoCOP } from "../data/destinos";
 function Carrusel() {
   const { catalogo } = useContext(FormularioContext);
   const [actual, setActual] = useState(0);
-  const [pausado, setPausado] = useState(false);
+  const [pausado, setPausado] = useState(false); // pausa con el botón: dura hasta pulsar "Reanudar"
+  const [cursorEncima, setCursorEncima] = useState(false); // pausa temporal mientras el cursor está encima
+  const detenido = pausado || cursorEncima;
   const total = catalogo.length;
   const indice = actual % total; // por si el catálogo cambia de tamaño
   const p = catalogo[indice];
@@ -17,17 +19,17 @@ function Carrusel() {
 
   // Avance automático. Se reinicia al cambiar de slide o al pausar.
   useEffect(() => {
-    if (pausado || total < 2) return undefined;
+    if (detenido || total < 2) return undefined;
     const intervalo = setInterval(() => setActual((i) => (i + 1) % total), 5000);
     return () => clearInterval(intervalo);
-  }, [pausado, total, actual]);
+  }, [detenido, total, actual]);
 
   return (
     <section
       className="carrusel"
       aria-label="Destinos destacados"
-      onMouseEnter={() => setPausado(true)}
-      onMouseLeave={() => setPausado(false)}
+      onPointerEnter={(e) => e.pointerType === "mouse" && setCursorEncima(true)} // un toque en el celular no cuenta
+      onPointerLeave={() => setCursorEncima(false)}
     >
       <div className="carrusel-slide" key={p.id}>
         <div className="carrusel-img">
